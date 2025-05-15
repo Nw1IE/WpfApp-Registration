@@ -5,13 +5,22 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WpfApp3"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
-    <Grid>
+        Title="ScrolViewer" Height="450" Width="800">
+    <Grid HorizontalAlignment="Right" Width="800">
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="0.6*"/>
             <ColumnDefinition Width="1*"/>
             <ColumnDefinition Width="0.6*"/>
         </Grid.ColumnDefinitions>
+        <!--<StackPanel>
+            <ScrollViewer HorizontalScrollBarVisibility="Auto">
+                <StackPanel VerticalAlignment="Top" HorizontalAlignment="Left">
+                    <TextBlock TextWrapping="Wrap" Margin="0,0,0,20">rwerwrw</TextBlock>
+                    <Rectangle Fill="Red" Width="204" Height="125"></Rectangle>
+                </StackPanel>
+
+            </ScrollViewer>
+        </StackPanel>-->
 
         <StackPanel Grid.Column="0" Grid.Row="0" VerticalAlignment="Top">
             <TextBlock Text="Отзывы на поддержку"
@@ -51,7 +60,9 @@
          FontSize="10"
          Margin="10,195,0,0"/>
         </StackPanel>
-        
+
+
+
         <StackPanel Grid.Column="3" Grid.Row="3" VerticalAlignment="Top">
             <TextBlock Text="Техническая поддержка"
            FontSize="16"
@@ -95,14 +106,14 @@
         </StackPanel>
 
         <StackPanel Grid.Row="1" Grid.Column="1" VerticalAlignment="Top">
-            <TextBlock TextWrapping="Wrap" Margin="70,25,3,5">
+            <TextBlock TextWrapping="Wrap" Margin="95,25,3,5">
                 <Run FontSize="20" Foreground="Red" FontWeight="Bold">Регистрация</Run>
                 <Run FontSize="19" Foreground="Black">сотрудников</Run>
             </TextBlock>
         </StackPanel>
 
         <StackPanel Grid.Row="1" Grid.Column="1" VerticalAlignment="Top">
-            <TextBlock TextWrapping="Wrap" Margin="150,50,3,5">
+            <TextBlock TextWrapping="Wrap" Margin="175,50,3,5">
                  <Run FontSize="19" Foreground="Black">компании</Run>
             </TextBlock>
         </StackPanel>
@@ -115,7 +126,7 @@
 
         <StackPanel Grid.Row="1" Grid.Column="1" VerticalAlignment="Top">
             <TextBlock Margin="2, 105, 2, 0" FontSize="15">
-                    <TextBox MinHeight="30" Height="19" Width="352" />
+                    <TextBox MinHeight="30" Height="19" Width="830" />
             </TextBlock>
         </StackPanel>
 
@@ -127,19 +138,19 @@
 
         <StackPanel Grid.Row="1" Grid.Column="1" VerticalAlignment="Top">
             <TextBlock Margin="2, 158, 2, 0" FontSize="15">
-                <PasswordBox PasswordChar="*" MinHeight="30" Height="19" Width="352"/>
+                <PasswordBox PasswordChar="*" MinHeight="30" Height="19" Width="830"/>
             </TextBlock>
         </StackPanel>
 
         <StackPanel Grid.Row="1" Grid.Column="1" VerticalAlignment="Top">
-            <TextBlock TextWrapping="Wrap" Margin="2,189,3,5">
+            <TextBlock TextWrapping="Wrap" Margin="2,189,3,5" >
            <Run FontSize="19" Foreground="Black">Повторите пароль:</Run>
             </TextBlock>
         </StackPanel>
 
         <StackPanel Grid.Row="1" Grid.Column="1" VerticalAlignment="Top">
             <TextBlock Margin="2, 212, 2, 0" FontSize="15">
-         <PasswordBox PasswordChar="#" MinHeight="30" Height="19" Width="352"/>
+         <PasswordBox PasswordChar="#" MinHeight="30" Height="19" Width="830"/>
             </TextBlock>
         </StackPanel>
 
@@ -150,7 +161,7 @@
         </StackPanel>
 
         <StackPanel Grid.Row="1" Grid.Column="1" VerticalAlignment="Top">
-            <ComboBox Name="Positions" Height="30" Margin="2,267,2,5" FontSize="19" VerticalAlignment="Top">
+            <ComboBox Name="Positions" Height="27" Margin="0,267,2,1" FontSize="19" VerticalAlignment="Top" Width="810">
                 <TextBlock>Администратор</TextBlock>
                 <TextBlock>Уборщик</TextBlock>
                 <TextBlock>Сантехник</TextBlock>
@@ -167,15 +178,11 @@
 
         <StackPanel Grid.Row="1" Grid.Column="1" VerticalAlignment="Top">
             <TextBlock Margin="2, 319, 2, 0" FontSize="15">
-                  <TextBox MinHeight="45" Height="42" Width="352" />
+                  <TextBox MinHeight="45" Height="42" Width="830" />
             </TextBlock>
         </StackPanel>
 
-        <StackPanel Grid.Row="1" Grid.Column="1" VerticalAlignment="Top">
-            <Button ToolTip="Введите коментарий об сотруднике" Margin="253,300,3,0">
-                Для ознакомления:
-            </Button>
-        </StackPanel>
+       
        
 
 
