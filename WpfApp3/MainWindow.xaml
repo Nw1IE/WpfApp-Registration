@@ -6,206 +6,152 @@
         xmlns:local="clr-namespace:WpfApp3"
         mc:Ignorable="d"
         Title="ScrolViewer" Height="450" Width="800">
-    <Grid HorizontalAlignment="Right" Width="800">
+
+    <Grid Margin="-1,0,1,0">
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="0.6*"/>
-            <ColumnDefinition Width="1*"/>
+
+            <ColumnDefinition Width="*"/>
             <ColumnDefinition Width="0.6*"/>
         </Grid.ColumnDefinitions>
-        <!--<StackPanel>
-            <ScrollViewer HorizontalScrollBarVisibility="Auto">
-                <StackPanel VerticalAlignment="Top" HorizontalAlignment="Left">
-                    <TextBlock TextWrapping="Wrap" Margin="0,0,0,20">rwerwrw</TextBlock>
-                    <Rectangle Fill="Red" Width="204" Height="125"></Rectangle>
-                </StackPanel>
 
-            </ScrollViewer>
-        </StackPanel>-->
+        <Grid.RowDefinitions>
+            <RowDefinition Height="0.3*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="0.3*"/>
+        </Grid.RowDefinitions>
 
-        <StackPanel Grid.Column="0" Grid.Row="0" VerticalAlignment="Top">
-            <TextBlock Text="Отзывы на поддержку"
-                   FontSize="16"
-                       Margin="7,85,0,0"/>
-        </StackPanel>
+        <StackPanel Grid.Row="1" Grid.Column="0" 
+             Grid.ColumnSpan="1" Grid.RowSpan="1"
+             Margin="5">
+            <TextBlock Text="Отзывы на техподдержку" FontSize="24"/>
+            <ListBox BorderThickness="0">
 
-        <StackPanel Grid.Column="0" Grid.Row="0" VerticalAlignment="Top">
-            <TextBlock Text="Демин Александр Ильич"
-                       FontSize="15"
-                       Margin="10,115,0,0"/>
-        </StackPanel>
+                <ListBoxItem>
+                    <StackPanel>
+                        <TextBlock Text="Дёмин Александр Ильич" FontSize="22"/>
+                        <TextBlock Text="До него смогли дозвониться" FontSize="14"/>
+                    </StackPanel>
+                </ListBoxItem>
 
-        <StackPanel Grid.Row="0" Grid.Column="0" VerticalAlignment="Top">
-            <TextBlock Text="До него смогли дозвониться"
-                       FontSize="10"
-                       Margin="10,135,0,0"/>
-        </StackPanel>
+                <ListBoxItem>
+                    <StackPanel>
+                        <TextBlock Text="Павлов Анатолий Кринделёвич" FontSize="22"/>
+                        <TextBlock Text="Смог дозвониться до техподдержки за 7 минут" FontSize="14"/>
+                    </StackPanel>
+                </ListBoxItem>
 
-        <StackPanel Grid.Row="0" Grid.Column="0" VerticalAlignment="Top">
-            <TextBlock Text="Павлов Анатолий Криндетов"
-               FontSize="15"
-               Margin="10,150,0,0"/>
-        </StackPanel>
-        <StackPanel Grid.Row="0" Grid.Column="0" VerticalAlignment="Top">
-            <TextBlock Text="Смог дозвониться до техподдержки за 7 часов"
-                FontSize="10"
-                Margin="10,167,0,0"/>
-        </StackPanel>
-        <StackPanel Grid.Row="0" Grid.Column="0" VerticalAlignment="Top">
-            <TextBlock Text="Харитонов Шамиль Евреваев"
-        FontSize="15"
-        Margin="10,178,0,0"/>
-        </StackPanel>
-        <StackPanel Grid.Row="0" Grid.Column="0" VerticalAlignment="Top">
-            <TextBlock Text="Не дозвонился но решил все сам!"
-         FontSize="10"
-         Margin="10,195,0,0"/>
-        </StackPanel>
+                <ListBoxItem>
+                    <StackPanel>
+                        <TextBlock Text="Харитонов Шамиль Ереванович" FontSize="22"/>
+                        <TextBlock Text="Не довзвонился, но решил всё сам!" FontSize="14"/>
+                    </StackPanel>
+                </ListBoxItem>
 
-
-
-        <StackPanel Grid.Column="3" Grid.Row="3" VerticalAlignment="Top">
-            <TextBlock Text="Техническая поддержка"
-           FontSize="16"
-               Margin="7,85,0,0"/>
-        </StackPanel>
-
-        <StackPanel Grid.Column="2" Grid.Row="2" VerticalAlignment="Top">
-            <TextBlock Text="Демин Александр Ильич"
-               FontSize="15"
-               Margin="10,115,0,0"/>
-        </StackPanel>
-
-        <StackPanel Grid.Row="2" Grid.Column="2" VerticalAlignment="Top">
-            <TextBlock Text="+7 (902) 865-98-66"
-                FontSize="10"
-                Margin="10,135,0,0"/>
-        </StackPanel>
-
-        <StackPanel Grid.Column="2" Grid.Row="2" VerticalAlignment="Top">
-            <TextBlock Text="Жар Агон Адович"
-                FontSize="15"
-                Margin="10,150,0,0"/>
-        </StackPanel>
-
-        <StackPanel Grid.Row="2" Grid.Column="2" VerticalAlignment="Top">
-            <TextBlock Text="+7 (956) 785-87-21"
-                FontSize="10"
-                Margin="10,170,0,0"/>
-        </StackPanel>
-
-        <StackPanel Grid.Column="2" Grid.Row="2" VerticalAlignment="Top">
-            <TextBlock Text="Запальнов Норман Никитич"
-                FontSize="15"
-                Margin="10,182,0,0"/>
-        </StackPanel>
-
-        <StackPanel Grid.Row="2" Grid.Column="2" VerticalAlignment="Top">
-            <TextBlock Text="+7 (960) 464-78-30"
-        FontSize="10"
-        Margin="10,200,0,0"/>
+            </ListBox>
         </StackPanel>
 
         <StackPanel Grid.Row="1" Grid.Column="1" VerticalAlignment="Top">
-            <TextBlock TextWrapping="Wrap" Margin="95,25,3,5">
-                <Run FontSize="20" Foreground="Red" FontWeight="Bold">Регистрация</Run>
-                <Run FontSize="19" Foreground="Black">сотрудников</Run>
+            <StackPanel>
+                <TextBlock Text="Логин:" FontSize="20"/>
+                <TextBox FontSize="20"></TextBox>
+            </StackPanel>
+
+            <StackPanel>
+                <TextBlock Text="Пароль:" FontSize="20"/>
+                <PasswordBox PasswordChar="*" FontSize="20"></PasswordBox>
+            </StackPanel>
+
+            <StackPanel>
+                <TextBlock Text="Повторите пароль:" FontSize="20"/>
+                <PasswordBox PasswordChar="#" FontSize="20"></PasswordBox>
+            </StackPanel>
+
+            <StackPanel>
+                <TextBlock Text="Должности:" FontSize="20"></TextBlock>
+                <ComboBox Name="Positions" FontSize="19" VerticalAlignment="Top" Width="810">
+                    <ComboBoxItem IsSelected="True">
+                        <StackPanel>
+                            <TextBlock  Text="Администратор"/>
+                        </StackPanel>
+                    </ComboBoxItem>
+                    <TextBlock>Уборщик</TextBlock>
+                    <TextBlock>Сантехник</TextBlock>
+                    <TextBlock>Водитель</TextBlock>
+                    <TextBlock>Менеджер</TextBlock>
+                </ComboBox>
+            </StackPanel>
+
+            <StackPanel>
+                <TextBlock Text="Комментарий:" FontSize="20"/>
+                <TextBox AcceptsReturn="True"
+                     VerticalScrollBarVisibility="Visible"
+                     AcceptsTab="True"
+                     FontSize="20" MaxLines="5" >
+                </TextBox>
+            </StackPanel>
+        </StackPanel>
+
+        <StackPanel Grid.Row="1" Grid.Column="3" Margin="5">
+            <TextBlock Text="Техническая поддержка" FontSize="24"/>
+            <ListBox BorderThickness="0">
+
+                <ListBoxItem>
+                    <StackPanel>
+                        <TextBlock Text="Дёмин Александр Ильич" FontSize="22"/>
+                        <TextBlock Text="+7 (902) 865-98-66" FontSize="14"/>
+                    </StackPanel>
+                </ListBoxItem>
+
+                <ListBoxItem>
+                    <StackPanel>
+                        <TextBlock Text="Жар Агон Адович" FontSize="22"/>
+                        <TextBlock Text="+7 (956) 785-87-21" FontSize="14"/>
+                    </StackPanel>
+                </ListBoxItem>
+
+                <ListBoxItem>
+                    <StackPanel>
+                        <TextBlock Text="Запальнов Норман Никитич" FontSize="22"/>
+                        <TextBlock Text="+7 (960) 464-78-30" FontSize="14"/>
+                    </StackPanel>
+                </ListBoxItem>
+
+            </ListBox>
+        </StackPanel>
+
+
+        <Grid Grid.Row="2" Grid.Column="1" Grid.ColumnSpan="1"  >
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="1"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+
+            <Grid.RowDefinitions>
+                <RowDefinition Height="5*"/>
+                <RowDefinition Height="12*"/>
+                <RowDefinition Height="17*"/>
+            </Grid.RowDefinitions>
+
+            <Button Content="Зарегистрировать" 
+                     Margin="5,5,6,5" Grid.Column="0" Grid.Row="2"
+                      Background="#FF5AA56C" FontSize="20" RenderTransformOrigin="0.5,0.5"/>
+
+            <Button Content="Отменить" 
+                  Margin="6,5,5,5" Grid.Column="2" Grid.Row="2"
+                  Background="#FFC85B5B" FontSize="20"/>
+        </Grid>
+
+        <StackPanel Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="4" HorizontalAlignment="Center" VerticalAlignment="Center">
+            <TextBlock TextWrapping="Wrap" TextAlignment="Center" FontSize="30">
+                <Run Foreground="#FFC85B5B" FontWeight="Bold">Регистрация</Run>
+                <Run Foreground="Black">сотрудников</Run>
             </TextBlock>
-        </StackPanel>
-
-        <StackPanel Grid.Row="1" Grid.Column="1" VerticalAlignment="Top">
-            <TextBlock TextWrapping="Wrap" Margin="175,50,3,5">
-                 <Run FontSize="19" Foreground="Black">компании</Run>
-            </TextBlock>
-        </StackPanel>
-
-        <StackPanel Grid.Row="1" Grid.Column="1" VerticalAlignment="Top">
-            <TextBlock TextWrapping="Wrap" Margin="2,82,3,5">
-          <Run FontSize="19" Foreground="Black">Логин: </Run>
-            </TextBlock>
-        </StackPanel>
-
-        <StackPanel Grid.Row="1" Grid.Column="1" VerticalAlignment="Top">
-            <TextBlock Margin="2, 105, 2, 0" FontSize="15">
-                    <TextBox MinHeight="30" Height="19" Width="830" />
-            </TextBlock>
-        </StackPanel>
-
-        <StackPanel Grid.Row="1" Grid.Column="1" VerticalAlignment="Top">
-            <TextBlock TextWrapping="Wrap" Margin="2,135,3,5">
-                  <Run FontSize="19" Foreground="Black">Пароль:</Run>
-            </TextBlock>
-        </StackPanel>
-
-        <StackPanel Grid.Row="1" Grid.Column="1" VerticalAlignment="Top">
-            <TextBlock Margin="2, 158, 2, 0" FontSize="15">
-                <PasswordBox PasswordChar="*" MinHeight="30" Height="19" Width="830"/>
-            </TextBlock>
-        </StackPanel>
-
-        <StackPanel Grid.Row="1" Grid.Column="1" VerticalAlignment="Top">
-            <TextBlock TextWrapping="Wrap" Margin="2,189,3,5" >
-           <Run FontSize="19" Foreground="Black">Повторите пароль:</Run>
-            </TextBlock>
-        </StackPanel>
-
-        <StackPanel Grid.Row="1" Grid.Column="1" VerticalAlignment="Top">
-            <TextBlock Margin="2, 212, 2, 0" FontSize="15">
-         <PasswordBox PasswordChar="#" MinHeight="30" Height="19" Width="830"/>
-            </TextBlock>
-        </StackPanel>
-
-        <StackPanel Grid.Row="1" Grid.Column="1" VerticalAlignment="Top">
-            <TextBlock TextWrapping="Wrap" Margin="2,242,3,5">
-                <Run FontSize="19" Foreground="Black">Должность:</Run>
-            </TextBlock>
-        </StackPanel>
-
-        <StackPanel Grid.Row="1" Grid.Column="1" VerticalAlignment="Top">
-            <ComboBox Name="Positions" Height="27" Margin="0,267,2,1" FontSize="19" VerticalAlignment="Top" Width="810">
-                <TextBlock>Администратор</TextBlock>
-                <TextBlock>Уборщик</TextBlock>
-                <TextBlock>Сантехник</TextBlock>
-                <TextBlock>Водитель</TextBlock>
-                <TextBlock>Менеджер</TextBlock>
-            </ComboBox>
-        </StackPanel>
-
-        <StackPanel Grid.Row="1" Grid.Column="1" VerticalAlignment="Top">
-            <TextBlock TextWrapping="Wrap" Margin="2,293,3,5">
-        <Run FontSize="19" Foreground="Black">Коментарий:</Run>
-            </TextBlock>
-        </StackPanel>
-
-        <StackPanel Grid.Row="1" Grid.Column="1" VerticalAlignment="Top">
-            <TextBlock Margin="2, 319, 2, 0" FontSize="15">
-                  <TextBox MinHeight="45" Height="42" Width="830" />
-            </TextBlock>
+            <TextBlock FontSize="30" HorizontalAlignment="Center">компании</TextBlock>
         </StackPanel>
 
        
-       
-
-
-
-
-
-
-
-
-
-
-        <StackPanel Grid.Column="1" Grid.Row="1" VerticalAlignment="Bottom"
-            Orientation="Horizontal" HorizontalAlignment="Left">
-            <Button Content="Зарегистрировать" Background="#FF5AA56C" Height="40" Width="120" Margin="5" x:Name="send_button1"/>
-
-        </StackPanel>
-
-        <StackPanel Grid.Column="1" Grid.Row="1" VerticalAlignment="Bottom"
-            Orientation="Horizontal" HorizontalAlignment="Right">
-            <Button Content="Отменить" Background="#FFC85B5B" Height="40" Width="120" Margin="5" x:Name="out_button1"/>
-
-        </StackPanel>
     </Grid>
-
 
 </Window>
